@@ -2,6 +2,7 @@ buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
+        gradlePluginPortal()
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:4.1.+'
@@ -13,7 +14,7 @@ apply plugin: 'maven-publish'
 
 version = '0.1.0'
 group = 'com.example.morphabilities'
-archivesBaseName = 'morphabilities-1.16.5-ichun'
+archivesBaseName = 'morphabilities-1.16.5'
 
 java {
     toolchain {
@@ -26,12 +27,15 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
-            args '--username', 'Dev'
-            mods { morphabilities { source sourceSets.main } }
+            mods {
+                morphabilities { source sourceSets.main }
+            }
         }
         server {
             workingDirectory project.file('run')
-            mods { morphabilities { source sourceSets.main } }
+            mods {
+                morphabilities { source sourceSets.main }
+            }
         }
     }
 }
@@ -40,8 +44,12 @@ repositories {
     maven { url = 'https://maven.minecraftforge.net' }
     mavenCentral()
 }
+
 dependencies {
+    // Wichtig: NUR diese Zeile!
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.39'
 }
 
-tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

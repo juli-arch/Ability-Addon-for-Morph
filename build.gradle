@@ -9,6 +9,10 @@ buildscript {
     }
 }
 
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
 version = '0.1.0'
 group = 'com.example.morphabilities'
 archivesBaseName = 'morphabilities-1.16.5'
@@ -43,7 +47,6 @@ repositories {
 }
 
 dependencies {
-    // Wichtig: NUR diese Zeile!
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.39'
 }
 

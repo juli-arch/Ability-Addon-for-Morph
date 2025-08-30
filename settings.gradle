@@ -1,8 +1,1 @@
-pluginManagement {
-  repositories {
-    gradlePluginPortal()
-    maven { url = 'https://maven.minecraftforge.net' }
-    mavenCentral()
-  }
-}
-rootProject.name = 'morphabilities-1.16.5'
+rootProject.name = "morphabilities-1.16.5"

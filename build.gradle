@@ -5,9 +5,10 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:4.1.+'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:4.1.16'
     }
 }
+
 
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'

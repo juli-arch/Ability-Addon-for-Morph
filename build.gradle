@@ -40,9 +40,12 @@ repositories {
     maven { url = 'https://maven.minecraftforge.net' }
     mavenCentral()
 }
-
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.39'
 }
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
 
 tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }

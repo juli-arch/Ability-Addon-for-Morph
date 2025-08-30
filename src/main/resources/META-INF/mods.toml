@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+[[mods]]
+modId="morphabilities"
+version="${file.jarVersion}"
+displayName="Morph Abilities (iChun, 1.16.5)"
+description='''Adds an ability keybind for iChun's Morph: Creeper prime, Enderman teleport, Ghast/Blaze fireballs, Wither skull, Dragon fireball, Elder Guardian laser and more. Uses reflection to detect current morph.'''
+
+[[dependencies.morphabilities]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.morphabilities]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"

@@ -8,9 +8,6 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:4.1.+'
     }
 }
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
 
 version = '0.1.0'
 group = 'com.example.morphabilities'
